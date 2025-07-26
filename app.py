@@ -58,7 +58,7 @@ if send_btn and user_input.strip():
     mood = detect_mood(user_input)
     reply = MODES[mode] if mood == "เศร้า" else "ฟังแล้วอบอุ่นใจ 😊 ขอให้วันนี้สดใสนะ~"
     st.session_state.chat_history.append(("แชทบอท", reply))
-    st.experimental_rerun()  # ใช้ rerun ปลอดภัย (Streamlit ล่าสุดจะไม่ error แล้ว)
+    st.rerun()  # rerun ปลอดภัย ไม่มี experimental แล้ว
 
 
 
